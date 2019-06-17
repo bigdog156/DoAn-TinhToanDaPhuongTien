@@ -1,0 +1,22 @@
+{% extends 'temp.html' %}
+{% block content %}
+    
+        {% for obj in it %}
+        <div class="row">
+                <div class="col-md-7">
+                  <a href="#">
+                    <img class="img-fluid rounded mb-3 mb-md-0" src={{ obj['link'] }} alt="">
+                  </a>
+                </div>
+                <div class="col-md-5">
+                  <h3>{{ obj['text'] }}</h3>
+                  <p>{{ obj['time'] }}</p>
+                  <p>{{ obj['price'] }}</p>
+                  <a class="btn btn-primary" href={{ obj['address'] }}>View </a>
+                </div>
+              </div>
+              <!-- /.row -->
+        
+              <hr>
+        {% endfor %}
+{% endblock %}
